@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "N8N_PORT=3000 n8n start"
+  },
+  "dependencies": {
+    "n8n": "^2.35.4",
+    "npm": "^12.0.2"
+  }
+}
