@@ -1,6 +1,7 @@
 {
   "packageManager": "npm@12.0.2",
   "scripts": {
+    "build": "npm install",
     "start": "N8N_PORT=3000 n8n start"
   },
   "dependencies": {

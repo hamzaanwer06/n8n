@@ -11,12 +11,14 @@ Velocity lists **n8n** as a supported framework, so you do not need Docker, Apac
 | `package.json` | Pins `n8n` and starts it on port `3000` (Velocity’s app port) |
 | `package-lock.json` | Locks dependency versions for reproducible deploys |
 
-Start command used by Velocity:
+Build and start commands used by Velocity:
 
 ```bash
-npm start
-# → N8N_PORT=3000 n8n start
+npm run build   # → npm install
+npm start       # → N8N_PORT=3000 n8n start
 ```
+
+n8n has no compile/bundle step — `build` only installs dependencies. If Velocity already runs `npm install` before your build command, you can leave **Build** empty in the dashboard instead; either approach is fine.
 
 ## Prerequisites
 
@@ -47,7 +49,7 @@ Velocity deploys from Git — keep `package.json` and `package-lock.json` on the
 5. Set framework to **n8n**.
 6. Select Node.js **22.x** or **24.x**.
 7. Confirm build and start commands:
-   - **Build:** `npm ci` (or `npm install`)
+   - **Build:** `npm run build` (or leave empty if Velocity already installs deps)
    - **Start:** `npm start`
 8. Pick a plan size. For light automation, **Starter (2 GB RAM)** is a reasonable baseline; scale up if you run many concurrent workflows.
 9. Deploy.
