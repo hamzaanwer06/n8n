@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Secrets & local env (never commit real keys)
+.env
+.env.local
+.env.*.local
+
+# n8n runtime data (SQLite, encryption-related user data)
+.n8n/
+*.sqlite
+*.sqlite-journal
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Temp
+tmp/
+.cache/
